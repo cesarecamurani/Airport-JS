@@ -1,20 +1,22 @@
-// describe('Plane', function () {
-//
-//   beforeEach(function() {
-//     var airport = new Airport();
-//     var plane = new Plane();
-//   });
-//
-//   describe('', function() {
-//
-//     it('', function() {
-//
-//     });
-//
-//   });
-//
-//
-//
-//
-//
-// });
+describe('Plane', function () {
+  var airport
+  var plane
+
+  beforeEach(function() {
+    airport = new Airport();
+    plane = new Plane();
+  };
+
+  describe('', function() {
+
+    it('', function() {
+
+    });
+
+  });
+
+
+
+
+
+});
