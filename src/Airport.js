@@ -2,15 +2,16 @@ function Airport() {
   this.hangar = [];
 };
 
-Airport.prototype.capacity = function() {
-  this.capacity = 10;
-};
+// Airport.prototype.capacity = function() {
+//   this.capacity = 10;
+// };
 
-Airport.prototype.land = function(plane) {
+Airport.prototype.clearForLanding = function(plane) {
   this.hangar.push(plane)
 };
 
-Airport.prototype.takeoff = function(plane) {
-  var pos = this.hangar.indexOf(plane);
-  this.hangar.splice(pos, 1);
+Airport.prototype.clearForTakeOff = function(plane) {
+  this.hangar = [];
+  // var pos = this.hangar.indexOf(plane);
+  // this.hangar.splice(pos, 1);
 };
