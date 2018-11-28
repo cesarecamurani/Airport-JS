@@ -1,9 +1,7 @@
-function WeatherReporter() {
-  this._weather = ["Sunny", "Cloudy", "Overcast", "Stormy"];
+function Weather () {
+  this._CHANCE_OF_STORMY = 0.5;
 };
 
-WeatherReporter.prototype.isStormy = function () {
-  var rand = this._weather[Math.floor(Math.random() * this._weather.length)];
-    if (rand === "Stormy") { return true; }
-    else { return false; };
+Weather.prototype.isStormy = function () {
+  return (Math.random() > this._CHANCE_OF_STORMY);
 };
