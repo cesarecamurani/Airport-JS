@@ -1,23 +1,27 @@
-const { verify, group, check  } = require('janus6');
-const airport = require('../src/Airport')
-const plane = require('../src/Plane')
+import janus6 from 'janus6'
+import { verify } from 'janus6'
+import Airport from '../src/Airport'
+import Plane from '../src/Plane'
 
-group('Airport', () => {
-  group('method: clearForLanding', () => {
-    check('adds a plane to the hangar', () => {
+let airport = new Airport()
+let plane = new Plane()
+
+janus6.group('Airport', () => {
+  janus6.group('method: clearForLanding', () => {
+    janus6.check('adds a plane to the hangar', () => {
       airport.clearForLanding(plane)
       verify.contains(airport.hangar, plane);
     });
   });
-  group('method: clearForLanding', () => {
-    check('adds a plane to the hangar', () => {
+  janus6.group('method: clearForLanding', () => {
+    janus6.check('adds a plane to the hangar', () => {
       airport.clearForTakeOff(plane)
       airport.clearForLanding(plane)
       verify.isTrue(verify.contains(airport.hangar, plane));
     });
   });
-  group('method: clearForTakeOff', () => {
-    check('removes a plane from the hangar', () => {
+  janus6.group('method: clearForTakeOff', () => {
+    janus6.check('removes a plane from the hangar', () => {
       airport.clearForTakeOff(plane)
       verify.notContains(airport.hangar, plane);
     });

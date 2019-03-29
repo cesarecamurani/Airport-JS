@@ -16,3 +16,4 @@ class Airport {
     this.hangar.splice( this.hangar.indexOf(plane), 1 );;
   };
 }
+export default Airport

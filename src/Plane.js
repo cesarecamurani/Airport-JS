@@ -1,10 +1,15 @@
-function Plane () {};
+class Plane {
 
-Plane.prototype.land = function (airport) {
-  airport.clearForLanding(this);
-  this._location = airport;
-};
+  constructor() {}
 
-Plane.prototype.takeoff = function (airport) {
-  this._location.clearForTakeOff();
+  land(airport) {
+    airport.clearForLanding(this);
+    this._location = airport;
+  };
+
+  takeoff(airport) {
+    this._location.clearForTakeOff();
+  };
+
 };
+export default Plane
