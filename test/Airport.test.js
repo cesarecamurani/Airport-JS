@@ -1,4 +1,4 @@
-const { verify, group, check  } = require('janus');
+const { verify, group, check  } = require('janus6');
 const airport = require('../src/Airport')
 const plane = require('../src/Plane')
 
