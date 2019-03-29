@@ -1,14 +1,15 @@
 class Plane {
 
-  constructor() {}
+  constructor() {
+    this.flyingStatus = true
+  }
 
-  land(airport) {
-    airport.clearForLanding(this);
-    this._location = airport;
+  land() {
+    this.flyingStatus = false
   };
 
-  takeoff(airport) {
-    this._location.clearForTakeOff();
+  takeOff() {
+    this.flyingStatus = true
   };
 
 };
